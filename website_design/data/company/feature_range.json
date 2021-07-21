@@ -1,0 +1,86 @@
+{
+    "CompanyID": [
+        0.0,
+        1234551265.0
+    ],
+    "CompanyType": [
+        0.0,
+        59.0
+    ],
+    "HonorNum": [
+        0.0,
+        10.0
+    ],
+    "IndustryCategory": [
+        0.0,
+        17.0
+    ],
+    "Province": [
+        0.0,
+        9.0
+    ],
+    "PartnerNum": [
+        0.0,
+        0.0
+    ],
+    "CompanyStatus": [
+        0.0,
+        0.0
+    ],
+    "CertificateNum": [
+        0.0,
+        0.0
+    ],
+    "RecordChangeNum": [
+        0.0,
+        0.0
+    ],
+    "BrandNum": [
+        0.0,
+        0.0
+    ],
+    "EmployeeNum": [
+        -4.5,
+        12.82
+    ],
+    "TotalAssets": [
+        -908.56,
+        1546.83
+    ],
+    "InvestedCapital": [
+        -1387.0,
+        2445.0
+    ],
+    "Liabilities": [
+        -207.06,
+        345.87
+    ],
+    "profitable": [
+        -1.28,
+        1.92
+    ],
+    "AssetLoss": [
+        -1.82,
+        1.9
+    ],
+    "PensionInsurance": [
+        -4.2,
+        5.88
+    ],
+    "UnemploymentInsurance": [
+        -3.55,
+        5.12
+    ],
+    "MedicalInsurance": [
+        -4.49,
+        6.23
+    ],
+    "InjuryInsurance": [
+        -3.71,
+        5.21
+    ],
+    "MaternityInsurance": [
+        -4.15,
+        5.93
+    ]
+}

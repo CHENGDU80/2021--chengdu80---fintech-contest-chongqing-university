@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Risk Assessment System-CQUSunrise</title>
+	<!--plugins-->
+	<link href="static/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="static/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="static/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="static/plugins/apexcharts-bundle/css/apexcharts.css" rel="stylesheet" />
+	<!--Data Tables -->
+	<link href="static/plugins/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+	<link href="static/plugins/datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+	<!-- loader-->
+	<link href="static/css/pace.min.css" rel="stylesheet" />
+	<script src="static/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" />
+	<!-- Icons CSS -->
+	<link rel="stylesheet" href="static/css/icons.css" />
+	<!-- App CSS -->
+	<link rel="stylesheet" href="static/css/app.css" />
+	<link rel="stylesheet" href="static/css/dark-style.css" />
+	<style type="text/css">
+		ul li {
+			list-style-type: none;
+		}
+	</style>
+	<!-- <script>
+		function totxt(seltxt) {
+			document.getElementById('company-id').value=seltxt;
+		}
+	</script> -->
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!--header-->
+		<header class="top-header">
+			<nav class="navbar navbar-expand">
+				<div class="left-topbar d-flex align-items-center">
+					<a href="javaScript:;" class="toggle-btn"> <i class="bx bx-menu"></i>
+					</a>
+				</div>
+				<div class="flex-grow-1 search-bar">
+					<div class="input-group">
+						<div class="input-group-prepend search-arrow-back">
+							<button class="btn btn-search-back" type="button"><i class="bx bx-arrow-back"></i>
+							</button>
+						</div>
+						<input type="text" class="form-control" placeholder="search" />
+						<div class="input-group-append">
+							<button class="btn btn-search" type="button"><i class="lni lni-search-alt"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="right-topbar ml-auto">
+					<div class="logo-white">
+						<img src="static/images/Logo.png" class="logo-icon" style="width:120px; height: 60px;" alt="">
+					</div>
+					<div class="logo-dark">
+						<img src="static/images/Logo.png" class="logo-icon" style="width:120px; height: 60px;" alt="">
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--end header-->
+		<!--page-wrapper-->
+		<div class="page-wrapper">
+			<!--sidebar-wrapper-->
+			<div class="sidebar-wrapper" data-simplebar="true">
+				<div class="sidebar-header">
+					<a href="javaScript:;" class="toggle-btn"> <i class="bx bx-menu"></i>
+					</a>
+
+				</div>
+				<!--navigation-->
+				<ul class="metismenu" id="menu">
+					<li>
+						<a class="has-arrow" href="javaScript:;">
+							<div class="parent-icon"><i class="bx bx-home-alt"
+									style="background:linear-gradient(to right, #8AE8F6, #4781FB);box-shadow:0px 3px 8.3px 0.7px #4781fb66;border-radius:8px;height:27px;width:25px;text-align:center;display:inline-block;color:black;"></i>
+							</div>
+							<div class="menu-title">Dashboard</div>
+						</a>
+						<ul class="">
+							<li> <a href="risk-assessment"><i
+										class="bx bx-right-arrow-alt"></i>Risk&nbsp;Assessment</a>
+							</li>
+							<li> <a href="indicator-analyse"><i
+										class="bx bx-right-arrow-alt"></i>Indicator&nbsp;Analyse</a>
+							</li>
+							<li> <a href="#" class="has-arrow"><i
+										class="bx bx-right-arrow-alt"></i>Model&nbsp;Display</a>
+								<ul>
+									<li> <a href="cart"><i class="bx bx-right-arrow-alt"></i>CART</a></li>
+									<li> <a href="gdbt"><i class="bx bx-right-arrow-alt"></i>GDBT</a></li>
+									<li> <a href="xgboost"><i class="bx bx-right-arrow-alt"></i>XGboost</a></li>
+									<li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Load your model</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-label">Web Apps</li>
+					<li>
+						<a href="ContactList">
+							<div class="parent-icon"><i class="bx bx-group"
+									style="background:linear-gradient(to right, #8AE8F6, #4781FB);box-shadow:0px 3px 8.3px 0.7px #4781fb66;border-radius:8px;height:27px;width:25px;text-align:center;display:inline-block;color:black;"></i>
+							</div>
+							<div class="menu-title">Contatcs</div>
+						</a>
+					</li>
+					<li>
+						<a href="TimeLine">
+							<div class="parent-icon"> <i class="bx bx-video-recording"
+									style="background:linear-gradient(to right, #8AE8F6, #4781FB);box-shadow:0px 3px 8.3px 0.7px #4781fb66;border-radius:8px;height:27px;width:25px;text-align:center;display:inline-block;color:black;"></i>
+							</div>
+							<div class="menu-title">Timeline</div>
+						</a>
+					</li>
+				</ul>
+				<!--end navigation-->
+			</div>
+			<!--end sidebar-wrapper-->
+			<!--page-content-wrapper-->
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<!--breadcrumb-->
+					<div class="page-breadcrumb d-none d-md-flex align-items-center mb-3">
+						<div class="breadcrumb-title pr-3">Risk Assessment</div>
+						<div class="pl-3">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb mb-0 p-0">
+									<li class="breadcrumb-item"><a href="javaScript:;"><i class='bx bx-home-alt'></i></a>
+									</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!--end breadcrumb-->
+					<!-- <h6 class="text-uppercase mb-0">Corporation Risk Assessment</h6> -->
+					<br>
+					<div class="row">
+						<div class="col-12 col-lg-12">
+							<div class="card radius-10">
+								<div class="card-header border-bottom-0">
+									<div class="row" style="margin-left: 20%;">
+										<!-- <div>
+											<h5 class="font-weight-bold mb-2 mb-lg-0">risk assessment</h5>
+										</div> -->
+										<!-- <button type="button" class="btn btn-outline-primary dropdown-toggle"
+											data-toggle="dropdown" style="color:white;">
+											Select Company ID
+										</button>
+										<div class="dropdown-menu" id="company-ids"
+										style="height: 200px; overflow-y: auto;">
+									</div> -->
+										<div>
+											<select id="company-ids" onchange="totxt(this.value)" class="text-primary"
+												style="width: 200px; height: 40px; border-radius:12px;background:'#8FC6F3';background-color:white border:0;">
+												<option value="" disabled selected hidden>Select Company Id </option>
+											</select>
+										</div>
+										<div class="ml-lg-2 mb-2 mb-lg-0">
+											<div class="btn-group-round">
+												<input id='company-id' type="text"
+													class="form-control btn-outline-primary"
+													placeholder="Input Company ID" style="border-radius: 12px;" />
+											</div>
+										</div>
+										<button id="company-id-button" type="button"
+											class="btn btn-primary radius-10 ml-lg-3">assessment</button>
+									</div>
+								</div>
+								<br/>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-12 col-lg-4" id="type" style="width: 99%; height:350px">
+											<div class="card">
+												<div class="card-header">
+													Recongnized Risk Type
+												</div>
+												<div class="card-body" style="width: 99%; height:350px;">
+													<h1 class="text-secondary"  style="font-family:Verdana;font-size: 1.125rem">
+														<img src="static/images/warning.png" class="logo-icon" style="width:30px; height: 30px;" alt="">Maximum
+															possible risk:
+													</h1>
+													<blockquote style="text-align:center;border: 2px solid #cce0ff;">
+														<br />
+														<h2 id="risk-type" style="font-family:Verdana;font-size: 2.0rem;color:#6c757d;">risk type</h2>
+														<br />
+
+														<i id="risk-explanlation" class="text-center" style="font-family:Verdana;font-size: 1.0rem;color:#459be5;">
+															The risk caused by the invalidity of the contract within the scope of law and the inability to perform it, or
+															the improper conclusion of the contract.
+														</i>
+														<br />
+														<br />
+
+													</blockquote>
+												</div>
+											</div>
+										</div>
+										<div class="col-12 col-lg-4">
+											<div class="card">
+												<div class="card-header">
+													Risk Type Probability
+												</div>
+												<div calss="card-body" id="probability"
+													style="width: 99%; height:350px">
+
+												</div>
+											</div>
+										</div>
+										<div class="col-12 col-lg-4">
+											<div class="card">
+												<div class="card-header">
+													Risk Level
+												</div>
+												<div class="card-body" id="level" style="width: 99%; height:350px">
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end row-->
+					<br/>
+					<br/>
+					<h6 class="text-uppercase mb-0">Company Base Information</h6>
+					<hr />
+					<div class="card-deck flex-column flex-lg-row">
+						<div class="card radius-10 bg-primary-blue">
+							<div class="card-body">
+								<div class="text-center">
+									<div class="font-60 text-white"><i class='bx bx-cart-alt'></i>
+									</div>
+									<h1 class="mb-0 text-white">8,562</h1>
+									<p class="mb-0 text-white">Economic Type</p>
+								</div>
+							</div>
+						</div>
+						<div class="card radius-10 bg-wall">
+							<div class="card-body">
+								<div class="text-center">
+									<div class="font-60 text-white"><i class='bx bx-support'></i>
+									</div>
+									<h1 class="mb-0 text-white">214</h1>
+									<p class="mb-0 text-white">Trademark Number</p>
+								</div>
+							</div>
+						</div>
+						<div class="card radius-10 bg-sunset">
+							<div class="card-body">
+								<div class="text-center">
+									<div class="font-60 text-white"><i class='bx bx-tachometer'></i>
+									</div>
+									<h1 class="mb-0 text-white">116</h1>
+									<p class="mb-0 text-white">Government Honors</p>
+								</div>
+							</div>
+						</div>
+						<div class="card radius-10 bg-voilet">
+							<div class="card-body">
+								<div class="text-center">
+									<div class="font-60 text-white"><i class='bx bx-dollar'></i>
+									</div>
+									<h1 class="mb-0 text-white">$6,248</h1>
+									<p class="mb-0 text-white">Total Assets</p>
+								</div>
+							</div>
+						</div>
+						<div class="card radius-10 bg-rose">
+							<div class="card-body">
+								<div class="text-center">
+									<div class="font-60 text-white"><i class='bx bx-user'></i>
+									</div>
+									<h1 class="mb-0 text-white">302</h1>
+									<p class="mb-0 text-white">Employees Numbers</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end flex card -->
+					<br/>
+					<br/>
+					<h6 class="text-uppercase mb-0">Company Risk Information</h6>
+					<hr />
+					<div class="row">
+						<div class="col-12 col-lg-8">
+							<div class="card">
+								<div class="card-header">Risks</div>
+								<div class="card-body">
+									<div id="carouselExampleDivTest" class="carousel slide text-secondary"
+										data-ride="carousel">
+										<ol class="carousel-indicators">
+											<li data-target="#carouselExampleDivTest" data-slide-to="0" class="active">
+											</li>
+											<li data-target="#carouselExampleDivTest" data-slide-to="1"></li>
+											<li data-target="#carouselExampleDivTest" data-slide-to="2"></li>
+											<li data-target="#carouselExampleDivTest" data-slide-to="3"></li>
+										</ol>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<div class="d-block w-100" style="height: 400px" alt="...">
+
+												</div>
+												<div class="carousel-caption d-none d-md-block text-secondary"
+													style="color:black;">
+													<h5>Operation Risk</h5>
+													<!-- <p>Nulla vitae elit libero, apharetra augue mollis interdum.</p> -->
+												</div>
+											</div>
+											<div class="carousel-item" style="height: 400px;">
+												<div class="d-block w-100" style="height:400px" alt="...">
+
+												</div>
+												<div class="carousel-caption d-none d-md-block text-secondary" style="color:black;">
+													<h5>Law Risk</h5>
+													<!-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. -->
+													</p>
+												</div>
+											</div>
+											<div class="carousel-item">
+												<div class="d-block w-100" style="height:400px" alt="...">
+
+												</div>
+												<div class="carousel-caption d-none d-md-block text-secondary" style="color:black;">
+													<h5>Loan Risk</h5>
+													<!-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. -->
+													</p>
+												</div>
+											</div>
+											<div class="carousel-item">
+												<div class="d-block w-100" style="height:400px" alt="...">
+
+												</div>
+												<div class="carousel-caption d-none d-md-block text-secondary" style="color:black;">
+													<h5>Other Risk</h5>
+													<!-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. -->
+													</p>
+												</div>
+											</div>
+										</div>
+										<a class="carousel-control-prev" href="#carouselExampleDivTest" role="button"
+											data-slide="prev"> <span class="carousel-control-prev-icon"
+												aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="carousel-control-next" href="#carouselExampleDivTest" role="button"
+											data-slide="next"> <span class="carousel-control-next-icon"
+												aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="card" style="height: 490px;">
+								<div class="card-header">Tips</div>
+								<div class="card-body text-muted">
+									<ul class="nav nav-tabs" id="myTab" role="tablist">
+										<li class="nav-item" role="presentation"> <a class="nav-link active"
+												id="home-tab" data-toggle="tab" href="#home" role="tab"
+												aria-controls="home" aria-selected="true">Operation</a>
+										</li>
+										<li class="nav-item" role="presentation"> <a class="nav-link" id="profile-tab"
+												data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+												aria-selected="false">Legal</a>
+										</li>
+										<li class="nav-item" role="presentation"> <a class="nav-link" id="contact-tab"
+												data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+												aria-selected="false">Loan</a>
+										</li>
+									</ul>
+									<div class="tab-content p-3" id="myTabContent">
+										<div class="tab-pane fade show active" id="home" role="tabpanel"
+											aria-labelledby="home-tab">Operation risk is the possibility that the future
+											operating cash flow of an enterprise will change due to changes in
+											production and operation or changes in market environment, thus affecting
+											the market value of the enterprise.
+											<br />
+											<b>How to prevent it:</b>
+											<br>
+											1.Implement a Quality Assurance Program
+											<br>
+											2.Limit High-Risk Customers, implement a rule that customers with poor
+											credit must pay ahead of time
+											<br>
+											3.Control Growth, train employees to focus on quality, not quantity
+
+										</div>
+										<div class="tab-pane fade" id="profile" role="tabpanel"
+											aria-labelledby="profile-tab">
+											Legal risk refers to the risk caused by the
+											invalidity of the contract within the scope of law and the inability to
+											perform it, or the improper conclusion of the contract.
+											<br />
+											<b>How to prevent it:</b>
+											<br>
+											1.Strengthen risk awareness
+											<br>
+											2.Improve the work system. The establishment and improvement of legal risk
+											prevention mechanism should be organically
+											combined with speeding up the establishment of modern enterprise system and
+											improving the corporate governance
+											structure.
+											<br>
+											3.Speed up the construction of the enterprise legal adviser system with the
+											general legal adviser system as the core.
+										</div>
+										<div class="tab-pane fade" id="contact" role="tabpanel"
+											aria-labelledby="contact-tab">Loan risk refers to the possibility of various
+											losses faced by the lender in the process of operating the loan business,
+											which is the measure to measure the degree of loan risk.
+											<br />
+											<b>How to prevent it:</b>
+											<br>
+											1.Strengthen the investigation and evaluation before the loan.
+											<br>
+											2.Determine a reasonable loan pledge rate.
+											<br>
+											3.Strict risk prevention measures should be stipulated in loan contract and
+											pledge contract.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end row -->
+				</div>
+			</div>
+			<!--end page-content-wrapper-->
+		</div>
+		<!--end page-wrapper-->
+		<!--start overlay-->
+		<div class="overlay toggle-btn-mobile"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<!--footer -->
+		<div class="footer">
+			<p class="mb-0">CHENGDU80 @2021 | Developed By : <a href="javaScript:" target="_blank">CQUSunrise
+					Group</a>
+			</p>
+		</div>
+		<!-- end footer -->
+	</div>
+	<!-- end wrapper -->
+
+
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn">
+			<i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+			<hr />
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr />
+			<div class="custom-control custom-radio">
+				<input type="radio" id="darkmode" name="customRadio" class="custom-control-input">
+				<label class="custom-control-label" for="darkmode">Dark Mode</label>
+			</div>
+			<hr />
+			<div class="custom-control custom-radio">
+				<input type="radio" id="lightmode" name="customRadio" checked class="custom-control-input">
+				<label class="custom-control-label" for="lightmode">Light Mode</label>
+			</div>
+		</div>
+	</div>
+	<!--end switcher-->
+
+	<!-- JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/popper.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<!--plugins-->
+	<script src="static/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="static/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="static/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!-- data table -->
+	<script src="static/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<!--echarts-->
+	<script src="static/js/echarts.min.js"></script>
+	<!-- App JS -->
+	<script src="static/js/app.js"></script>
+	<!-- Page JS -->
+	<script src="static/js/risk-assessment.js"></script>
+	<!-- <script>
+		$(document).ready(function () {
+			// Default data table
+			$('#example').DataTable();
+			var table = $('#example2').DataTable({
+				lengthChange: false,
+				buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+			});
+			table.buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+
+		});
+	</script> -->
+
+</body>
+
+</html>

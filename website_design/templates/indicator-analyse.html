@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Risk Assessment System-CQUSunrise</title>
+	<!--plugins-->
+	<link href="static/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="static/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="static/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="static/plugins/apexcharts-bundle/css/apexcharts.css" rel="stylesheet" />
+	<!--Data Tables -->
+	<link href="static/plugins/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+	<link href="static/plugins/datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+	<!-- loader-->
+	<link href="static/css/pace.min.css" rel="stylesheet" />
+	<script src="static/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" />
+	<!-- Icons CSS -->
+	<link rel="stylesheet" href="static/css/icons.css" />
+	<!-- App CSS -->
+	<link rel="stylesheet" href="static/css/app.css" />
+	<link rel="stylesheet" href="static/css/dark-style.css" />
+	<style type="text/css">
+		ul li {
+			list-style-type: none;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!--header-->
+		<header class="top-header">
+			<nav class="navbar navbar-expand">
+				<div class="left-topbar d-flex align-items-center">
+					<a href="javaScript:;" class="toggle-btn"> <i class="bx bx-menu"></i>
+					</a>
+				</div>
+				<div class="flex-grow-1 search-bar">
+					<div class="input-group">
+						<div class="input-group-prepend search-arrow-back">
+							<button class="btn btn-search-back" type="button"><i class="bx bx-arrow-back"></i>
+							</button>
+						</div>
+						<input type="text" class="form-control" placeholder="search" />
+						<div class="input-group-append">
+							<button class="btn btn-search" type="button"><i class="lni lni-search-alt"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="right-topbar ml-auto">
+					<div class="logo-white">
+						<img src="static/images/Logo.png" class="logo-icon" style="width:120px; height: 60px;" alt="">
+					</div>
+					<div class="logo-dark">
+						<img src="static/images/Logo.png" class="logo-icon" style="width:120px; height: 60px;" alt="">
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--end header-->
+		<!--page-wrapper-->
+		<div class="page-wrapper">
+			<!--sidebar-wrapper-->
+			<div class="sidebar-wrapper" data-simplebar="true">
+				<div class="sidebar-header">
+					<a href="javaScript:;" class="toggle-btn"> <i class="bx bx-menu"></i>
+					</a>
+
+				</div>
+				<!--navigation-->
+				<ul class="metismenu" id="menu">
+					<li>
+						<a class="has-arrow" href="javaScript:;">
+							<div class="parent-icon"><i class="bx bx-home-alt"
+									style="background:linear-gradient(to right, #8AE8F6, #4781FB);box-shadow:0px 3px 8.3px 0.7px #4781fb66;border-radius:8px;height:27px;width:25px;text-align:center;display:inline-block;color:black;"></i>
+							</div>
+							<div class="menu-title">Dashboard</div>
+						</a>
+						<ul class="">
+							<li> <a href="risk-assessment"><i class="bx bx-right-arrow-alt"></i>Risk&nbsp;Assessment</a>
+							</li>
+							<li> <a href="indicator-analyse"><i class="bx bx-right-arrow-alt"></i>Indicator&nbsp;Analyse</a>
+							</li>
+							<li> <a href="#" class="has-arrow"><i class="bx bx-right-arrow-alt"></i>Model&nbsp;Display</a>
+								<ul>
+									<li> <a href="cart"><i class="bx bx-right-arrow-alt"></i>CART</a></li>
+									<li> <a href="gdbt"><i class="bx bx-right-arrow-alt"></i>GDBT</a></li>
+									<li> <a href="xgboost"><i class="bx bx-right-arrow-alt"></i>XGboost</a></li>
+									<li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Load your model</a></li>
+
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-label">Web Apps</li>
+					<li>
+						<a href="ContactList">
+							<div class="parent-icon"><i class="bx bx-group"
+									style="background:linear-gradient(to right, #8AE8F6, #4781FB);box-shadow:0px 3px 8.3px 0.7px #4781fb66;border-radius:8px;height:27px;width:25px;text-align:center;display:inline-block;color:black;"></i>
+							</div>
+							<div class="menu-title">Contatcs</div>
+						</a>
+					</li>
+					<li>
+						<a href="TimeLine">
+							<div class="parent-icon"> <i class="bx bx-video-recording"
+									style="background:linear-gradient(to right, #8AE8F6, #4781FB);box-shadow:0px 3px 8.3px 0.7px #4781fb66;border-radius:8px;height:27px;width:25px;text-align:center;display:inline-block;color:black;"></i>
+							</div>
+							<div class="menu-title">Timeline</div>
+						</a>
+					</li>
+				</ul>
+				<!--end navigation-->
+			</div>
+			<!--end sidebar-wrapper-->
+			<!--page-content-wrapper-->
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<!--breadcrumb-->
+					<div class="page-breadcrumb d-none d-md-flex align-items-center mb-3">
+						<div class="breadcrumb-title pr-3">Indicator Analyse</div>
+						<div class="pl-3">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb mb-0 p-0">
+									<li class="breadcrumb-item"><a href="javaScript:;"><i class='bx bx-home-alt'></i></a>
+									</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!--end breadcrumb-->
+
+					<!-- <h6 class="text-uppercase mb-0">Total Indicators</h6>
+					<hr />
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="media">
+										<div class="media-body">
+											<h6>Sessions</h6>
+											<h4 class="font-weight-bold">32,842 <small
+													class="text-success font-small">(+40%)</small></h4>
+										</div>
+										<div class="dashboard-icons bg-light-primary text-primary"><i
+												class='bx bx-refresh'></i>
+										</div>
+									</div>
+									<p class="text-secondary mb-0">Analytics for last week</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="media">
+										<div class="media-body">
+											<h6>Users</h6>
+											<h4 class="font-weight-bold">16,352 <small
+													class="text-success font-small">(+22%)</small></h4>
+										</div>
+										<div class="dashboard-icons bg-light-danger text-danger"><i
+												class='bx bx-group'></i>
+										</div>
+									</div>
+									<p class="text-secondary mb-0">Analytics for last week</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="media">
+										<div class="media-body">
+											<h6>Time on Site</h6>
+											<h4 class="font-weight-bold">34m 14s <small
+													class="text-success font-small">(+55%)</small></h4>
+										</div>
+										<div class="dashboard-icons bg-light-warning text-warning"><i
+												class='bx bx-time'></i>
+										</div>
+									</div>
+									<p class="text-secondary mb-0">Analytics for last week</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="media">
+										<div class="media-body">
+											<h6>Goal Completions</h6>
+											<h4 class="font-weight-bold">1,94,2335</h4>
+										</div>
+										<div class="dashboard-icons bg-light-purple text-purple"><i
+												class='bx bxs-cube'></i>
+										</div>
+									</div>
+									<p class="text-secondary mb-0">Analytics for last month</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="media">
+										<div class="media-body">
+											<h6>Bounce Rate</h6>
+											<h4 class="font-weight-bold">58% <small
+													class="text-danger font-small">(-16%)</small></h4>
+										</div>
+										<div class="dashboard-icons bg-light-shineblue text-shineblue"><i
+												class='bx bx-line-chart'></i>
+										</div>
+									</div>
+									<p class="text-secondary mb-0">Analytics for last week</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="media">
+										<div class="media-body">
+											<h6>New Sessions</h6>
+											<h4 class="font-weight-bold">96% <small
+													class="text-danger font-small">(+54%)</small></h4>
+										</div>
+										<div class="dashboard-icons bg-light-cyne text-cyne"><i
+												class='bx bx-bar-chart'></i>
+										</div>
+									</div>
+									<p class="text-secondary mb-0">Analytics for last week</p>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<br>
+					<div class="row">
+						<div class="col-12 col-lg-12">
+							<div class="card radius-10">
+								<div class="card-header border-bottom-0">
+									<div class="row" style="margin-left: 20%;">
+										<div>
+											<select id="company-ids" onchange="totxt(this.value)" class="text-primary"
+												style="width: 200px; height: 40px; border-radius:12px;background:'#8FC6F3';border:0;">
+												<option value="" disabled selected hidden>Select Company Id </option>
+											</select>
+										</div>
+										<div class="ml-lg-2 mb-2 mb-lg-0">
+											<div class="btn-group-round">
+												<input id='company-id' type="text"
+													class="form-control btn-outline-primary"
+													placeholder="Input Company ID" style="border-radius: 12px;" />
+											</div>
+										</div>
+										<button id="company-id-button" type="button"
+											class="btn btn-primary radius-10 ml-lg-3">assessment</button>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<!-- <div class="col-12 col-lg-12" style="width: 100%;">
+											<h3 class="text-primary text-center" id="show-company-id">Company ID: 87976876</h3>
+										</div>
+										<br>
+										<br>
+										<br>
+										<br> -->
+										<div class="col-12 col-lg-12" id="indicator"
+											style="width: 99%; height:350px">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end row -->
+					<div class="card mx-auto">
+						<div id="table-button" class="card-header border-bottom-0">
+							<div class="d-lg-flex align-items-center">
+								<div id="data-toggle-test">
+									<!-- <h5 class="font-weight-bold mb-2 mb-lg-0">Feature Project</h5> -->
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table mb-0" id="com_news_info">
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end table -->
+					<br/>
+					<br/>
+					<h6 class="text-uppercase mb-0">TSNE</h6>
+					<hr />
+					<div class="row">
+						<div class="col-12 col-lg-12">
+							<div class="card radius-10">
+								<div class="card-body">
+									<div class="col-12 col-lg-12" id="tsne" style="width: 99%; height:500px">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end row-->
+				</div>
+			</div>
+			<!--end page-content-wrapper-->
+		</div>
+		<!--end page-wrapper-->
+		<!--start overlay-->
+		<div class="overlay toggle-btn-mobile"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<!--footer -->
+		<div class="footer">
+			<p class="mb-0">CHENGDU80 @2021 | Developed By : <a href="javaScript:" target="_blank">CQUSunrise
+					Group</a>
+			</p>
+		</div>
+		<!-- end footer -->
+	</div>
+	<!-- end wrapper -->
+
+
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn">
+			<i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+			<hr />
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr />
+			<div class="custom-control custom-radio">
+				<input type="radio" id="darkmode" name="customRadio" class="custom-control-input">
+				<label class="custom-control-label" for="darkmode">Dark Mode</label>
+			</div>
+			<hr />
+			<div class="custom-control custom-radio">
+				<input type="radio" id="lightmode" name="customRadio" checked class="custom-control-input">
+				<label class="custom-control-label" for="lightmode">Light Mode</label>
+			</div>
+		</div>
+	</div>
+	<!--end switcher-->
+
+	<!-- JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/popper.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<!--plugins-->
+	<script src="static/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="static/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="static/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!-- data table -->
+	<script src="static/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<!--echarts-->
+	<script src="static/js/echarts.min.js"></script>
+	<!-- App JS -->
+	<script src="static/js/app.js"></script>
+	<!-- Page JS -->
+	<script src="static/js/indicator-analyse.js"></script>
+	<!-- <script>
+		$(document).ready(function () {
+			// Default data table
+			$('#example').DataTable();
+			var table = $('#example2').DataTable({
+				lengthChange: false,
+				buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+			});
+			table.buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+
+		});
+	</script> -->
+
+</body>
+
+</html>

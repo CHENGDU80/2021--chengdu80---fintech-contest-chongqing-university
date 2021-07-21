@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Risk Assessment System-CQUSunrise</title>
+	<!--favicon-->
+	<link rel="icon" href="static/images/favicon-32x32.png" type="image/png" />
+	<!-- loader-->
+	<link href="static/css/pace.min.css" rel="stylesheet" />
+	<script src="static/js/pace.min.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" />
+	<!-- Icons CSS -->
+	<link rel="stylesheet" href="static/css/icons.css" />
+	<!-- App CSS -->
+	<link rel="stylesheet" href="static/css/app.css" />
+	<link rel="stylesheet" href="static/css/dark-style.css" />
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+
+		<div class="section-authentication">
+			<div class="container-fluid">
+				<div class="card mb-0">
+					<div class="card-body p-0">
+						<div class="row no-gutters">
+							<div class="col-12 col-lg-5 col-xl-4 d-flex align-items-stretch">
+								<div class="card mb-0 shadow-none bg-transparent w-100 login-card rounded-0">
+									<div class="card-body p-md-5">
+										<img src="static/images/logo-img.png" width="180" alt="" />
+										<h4 class="mt-5"><strong>Welcome Back</strong></h4>
+										<p>Log in to your account using email & password</p>
+										<div class="form-group mt-4">
+											<label>Email Address</label>
+											<input type="text" class="form-control"
+												placeholder="Enter your email address" />
+										</div>
+										<div class="form-group">
+											<label>Enter Password</label>
+											<input type="password" class="form-control"
+												placeholder="Enter your password" />
+										</div>
+										<div class="form-row">
+											<div class="form-group col">
+												<div class="custom-control custom-switch">
+													<input type="checkbox" class="custom-control-input"
+														id="customSwitch1" checked>
+													<label class="custom-control-label" for="customSwitch1">Remember
+														Me</label>
+												</div>
+											</div>
+											<div class="form-group col text-right">
+												<a href="authentication-forgot-password.html"><i
+														class='bx bxs-key mr-2'></i>Forget Password?</a>
+											</div>
+										</div>
+										<a href="risk-assessment">
+											<button type="button" class="btn btn-primary btn-block mt-3"
+												style="border-radius:12px;"><i
+													class='bx bxs-lock mr-1'></i>Login</button>
+											<div class="text-center mt-4">
+												<p class="mb-0">Dont' have an account yet? <a
+														href="authentication-register.html">Create an account</a></p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-7 col-xl-8 d-flex align-items-stretch">
+								<div class="card mb-0 shadow-none bg-transparent w-100 rounded-0">
+									<div class="card-body p-md-5" style="width: 90%; height: 90%">
+										<div class="text-center"><img src="static/images/login-images/logo.jpg"
+												class="img-fluid" alt="" /></div>
+										<h5 class="card-title">Corporate Risk Assessment</h5>
+										<ul>
+											<li> The system can profile the target corporate to help users to have a
+												summary view of the basic corporate status. </li>
+											<li>Participants are encouraged to implement and deploy
+												an early warning mechanism for the target corporate or prompt the early
+												warnings for its relevant firms, so
+												that companies can discover their problems in advance. </li>
+											<li> The system can provide some visual
+												clues or explanations for users to understand the early warning signals.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer bg-transparent px-md-5">
+					<div class="d-flex align-items-center justify-content-between flex-wrap">
+						<p class="mb-0"> CHENGDU80 @2021 | Developed By: <a target="_blank">CQUSunrise Group</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+	</div>
+	<!-- end wrapper -->
+
+
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn">
+			<i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+			<hr />
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr />
+			<div class="custom-control custom-radio">
+				<input type="radio" id="darkmode" name="customRadio" class="custom-control-input">
+				<label class="custom-control-label" for="darkmode">Dark Mode</label>
+			</div>
+			<hr />
+			<div class="custom-control custom-radio">
+				<input type="radio" id="lightmode" name="customRadio" checked class="custom-control-input">
+				<label class="custom-control-label" for="lightmode">Light Mode</label>
+			</div>
+		</div>
+	</div>
+	<!--end switcher-->
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="static/js/jquery.min.js"></script>
+
+	<script>
+		/*switcher*/
+
+		$(".switcher-btn").on("click", function () {
+			$(".switcher-wrapper").toggleClass("switcher-toggled");
+		});
+
+		$("#darkmode").on("click", function () {
+			$("html").addClass("dark-theme");
+		});
+
+		$("#lightmode").on("click", function () {
+			$("html").removeClass("dark-theme");
+		});
+	</script>
+
+
+</body>
+
+</html>
