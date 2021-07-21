@@ -20,9 +20,9 @@ You can see detailed information in dataprocess.py
 
 In this part, we use intelligent algorithm: **Genetic Algorithm** and **Firefly Algorithm**. The examples are in the next two pictures:
 
-<img src="/Users/songxinyi/2021--chengdu80---fintech-contest-chongqing-university/image-20210721033658210.png" alt="image-20210721033658210" style="zoom:50%;" />
+<img src="./image1.png" alt="image-20210721033658210" style="zoom:50%;" />
 
-<img src="/Users/songxinyi/2021--chengdu80---fintech-contest-chongqing-university/image-20210721033717917.png" alt="image-20210721033717917" style="zoom:50%;" />
+<img src="./image2.png" alt="image-20210721033717917" style="zoom:50%;" />
 
 You can see more detailed information in the Feature Extraction folder
 
